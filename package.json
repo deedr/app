@@ -1,0 +1,72 @@
+{
+  "name": "deedr-app",
+  "version": "0.0.1",
+  "description": "Something good will happen",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deedr/app"
+  },
+  "keywords": [
+    "gulp",
+    "react",
+    "browserify",
+    "seed",
+    "boilerplate",
+    "kickstarter",
+    "ES6",
+    "6to5",
+    "babel",
+    "mocha",
+    "chai"
+  ],
+  "scripts": {
+    "test": "mocha --reporter nyan --compilers js:babel/register --recursive"
+  },
+  "author": "Rui Araújo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/deedr/app/issues"
+  },
+  "homepage": "https://github.com/deedr/app",
+  "dependencies": {
+    "flux": "^2.0.0",
+    "lodash": "^3.10.0",
+    "material-ui": "^0.10.2",
+    "object-assign": "^3.0.0",
+    "react": "^0.13.3",
+    "react-grid-layout": "^0.8.3",
+    "react-router": "^0.13.3",
+    "react-select": "^0.5.6",
+    "react-tap-event-plugin": "^0.1.7"
+  },
+  "devDependencies": {
+    "autoprefixer-core": "^5.2.1",
+    "babel": "^5.8.19",
+    "babel-eslint": "^3.1.30",
+    "babelify": "^6.1.2",
+    "browser-sync": "2.8.0",
+    "browserify": "^10.2.4",
+    "chai": "^3.0.0",
+    "del": "^1.2.0",
+    "eslint": "^0.23.0",
+    "eslint-plugin-react": "^2.5.2",
+    "gulp": "^3.9.0",
+    "gulp-changed": "^1.2.1",
+    "gulp-csso": "^1.0.0",
+    "gulp-eslint": "^0.14.0",
+    "gulp-image": "^1.0.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-postcss": "^5.1.9",
+    "gulp-sass": "^2.0.1",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.2.0",
+    "mocha": "^2.2.5",
+    "react-tools": "^0.13.3",
+    "reactify": "^1.1.1",
+    "run-sequence": "^1.1.2",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.3.1"
+  }
+}
