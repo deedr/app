@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/deedr/app",
   "dependencies": {
-    "flux": "^2.0.0",
+    "flux": "^2.0.3",
     "lodash": "^3.10.0",
     "material-ui": "^0.10.2",
     "object-assign": "^3.0.0",
@@ -62,7 +62,6 @@
     "gulp-sourcemaps": "^1.5.2",
     "gulp-uglify": "^1.2.0",
     "mocha": "^2.2.5",
-    "react-tools": "^0.13.3",
     "reactify": "^1.1.1",
     "run-sequence": "^1.1.2",
     "vinyl-buffer": "^1.0.0",

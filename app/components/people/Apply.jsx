@@ -1,7 +1,7 @@
 import React from 'react';
-import FullWidthSection from './FullWidthSection.jsx';
+import FullWidthSection from './../widgets/FullWidthSection.jsx';
 import {RaisedButton, Styles} from 'material-ui';
-import MultiSelectField from './widgets/MultiSelectField.jsx';
+import MultiSelectField from './../widgets/MultiSelectField.jsx';
 let { Spacing, Colors } = Styles;
 
 class Apply extends React.Component {
@@ -37,7 +37,10 @@ class Apply extends React.Component {
         paddingTop: '20px'
       },
       select: {
-        margin: Spacing.desktopGutterMore + 'px'
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        maxWidth: '1000px',
+        padding: Spacing.desktopGutterMore + 'px'
       }
     };
     return (

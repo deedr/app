@@ -1,5 +1,6 @@
 import React from 'react';
-import App from './components/App.jsx';
+import Router from 'react-router';
+import AppRoutes from './components/AppRoutes.jsx';
 import injectTapEventPlugin from'react-tap-event-plugin';
 
 //Needed for React Developer Tools
@@ -11,4 +12,17 @@ window.React = React;
 //https://github.com/zilverline/react-tap-event-plugin
 injectTapEventPlugin();
 
-React.render(<App />, document.body);
+
+Router
+  // Runs the router, similiar to the Router.run method. You can think of it as an
+  // initializer/constructor method.
+  .create({
+    location: Router.HistoryLocation,
+    routes: AppRoutes,
+    scrollBehavior: Router.ScrollToTopBehavior
+  })
+  // This is our callback function, whenever the url changes it will be called again.
+  // Handler: The ReactComponent class that will be rendered
+  .run(function (Handler) {
+    React.render(<Handler/>, document.body);
+  });

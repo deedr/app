@@ -50,7 +50,8 @@ gulp.task('watchify', function() {
   // add custom browserify options here
   var customOpts = {
     entries: [p.jsx],
-    debug: true
+    debug: true,
+    transform: [babelify.configure({stage: 1})]
   };
   var opts = assign({}, watchify.args, customOpts);
   var bundler = watchify(browserify(p.jsx, opts));
@@ -68,8 +69,7 @@ gulp.task('watchify', function() {
       .pipe(reload({stream: true}));
   }
 
-  bundler.transform(babelify.configure({stage: 1}))
-  .on('update', rebundle);
+  bundler.on('update', rebundle);
   return rebundle();
 });
 
@@ -80,7 +80,8 @@ gulp.task('browserify', function() {
     .pipe(source(p.bundle))
     .pipe(buffer())
     .pipe(sourcemaps.init({loadMaps: true}))
-    .pipe(uglify())
+      .pipe(uglify())
+    .on('error', notify.onError())
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(p.tmpJs));
 });
