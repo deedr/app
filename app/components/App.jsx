@@ -1,12 +1,11 @@
 import React from 'react';
-import { AppBar, AppCanvas, FlatButton, IconButton, Menu, Styles, RaisedButton, Dialog, Avatar, Card, CardHeader, CardMedia,
-  CardText,CardActions, CardTitle  } from 'material-ui';
+import { AppBar, AppCanvas, Styles } from 'material-ui';
 import Router from 'react-router';
 
 
 let RouteHandler = Router.RouteHandler;
 let ThemeManager = new Styles.ThemeManager();
-let Colors = Styles.Colors;
+let { Spacing, Colors} = Styles;
 
 
 class App extends React.Component {
@@ -26,12 +25,16 @@ class App extends React.Component {
   }
 
   render() {
-
+    let root = {
+      paddingTop: Spacing.desktopKeylineIncrement + 'px'
+    }
     return (
       <AppCanvas>
         <AppBar title="Deedr" showMenuIconButton={false}/>
 
-        <RouteHandler />
+        <div style={root}>
+          <RouteHandler />
+        </div>
       </AppCanvas>
     );
   }

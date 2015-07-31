@@ -17,7 +17,6 @@ Router
   // Runs the router, similiar to the Router.run method. You can think of it as an
   // initializer/constructor method.
   .create({
-    location: Router.HistoryLocation,
     routes: AppRoutes,
     scrollBehavior: Router.ScrollToTopBehavior
   })

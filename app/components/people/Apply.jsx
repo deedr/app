@@ -1,6 +1,9 @@
 import React from 'react';
-import FullWidthSection from './../widgets/FullWidthSection.jsx';
 import {RaisedButton, Styles} from 'material-ui';
+import Router from 'react-router';
+
+let Link = Router.Link;
+
 import MultiSelectField from './../widgets/MultiSelectField.jsx';
 let { Spacing, Colors } = Styles;
 
@@ -29,9 +32,6 @@ class Apply extends React.Component {
       { label: 'super ugly animals', value: 'strawberry' }
     ];
     let styles = {
-      root: {
-        paddingTop: Spacing.desktopKeylineIncrement + 'px'
-      },
       button: {
         textAlign: 'center',
         paddingTop: '20px'
@@ -44,7 +44,7 @@ class Apply extends React.Component {
       }
     };
     return (
-      <div style={styles.root}>
+      <div>
         <div style={styles.select}>
           <MultiSelectField ops={skills} label="What are you good at?"
                             onUpdate={this.handleSkillsUpdate}/>
@@ -54,7 +54,10 @@ class Apply extends React.Component {
                             onUpdate={this.handleCausesUpdate}/>
         </div>
         <div style={styles.button}>
-          <RaisedButton label="Apply" primary={true} onTouchTap={this.handleTouchTap}/>
+          <Link to="campaign">
+            <RaisedButton label="Apply" primary={true} onTouchTap={this.handleTouchTap}/>
+          </Link>
+
         </div>
       </div>
 
