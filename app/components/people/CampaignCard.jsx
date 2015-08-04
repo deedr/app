@@ -14,7 +14,7 @@ import {
 
 let {Spacing} = Styles;
 
-class CampainCard extends React.Component {
+class CampaignCard extends React.Component {
 
   constructor(props) {
     super(props);
@@ -44,4 +44,4 @@ class CampainCard extends React.Component {
 
 }
 
-export default CampainCard;
+export default CampaignCard;

@@ -1,6 +1,7 @@
 import React from 'react';
 import {RaisedButton, Styles} from 'material-ui';
 import Router from 'react-router';
+import {SkillsOptions, CausesOptions} from '../../constants/FilterContants.js';
 
 let Link = Router.Link;
 
@@ -21,16 +22,6 @@ class Apply extends React.Component {
   }
 
   render() {
-    var skills = [
-      { label: 'SEO', value: 'seo' },
-      { label: 'Construction', value: 'construction' },
-      { label: 'Computer Programming', value: 'coputer' }
-    ];
-    var causes = [
-      { label: 'Cute Animalas', value: 'cute' },
-      { label: 'Ugly animals', value: 'ugle' },
-      { label: 'super ugly animals', value: 'strawberry' }
-    ];
     let styles = {
       button: {
         textAlign: 'center',
@@ -46,15 +37,15 @@ class Apply extends React.Component {
     return (
       <div>
         <div style={styles.select}>
-          <MultiSelectField ops={skills} label="What are you good at?"
+          <MultiSelectField ops={SkillsOptions} label="What are you good at?"
                             onUpdate={this.handleSkillsUpdate}/>
         </div>
         <div style={styles.select}>
-          <MultiSelectField ops={causes} label="What do you care about?"
+          <MultiSelectField ops={CausesOptions} label="What do you care about?"
                             onUpdate={this.handleCausesUpdate}/>
         </div>
         <div style={styles.button}>
-          <Link to="campaign">
+          <Link to="campaigns">
             <RaisedButton label="Apply" primary={true} onTouchTap={this.handleTouchTap}/>
           </Link>
 
@@ -77,7 +68,7 @@ class Apply extends React.Component {
   }
 
   handleTouchTap() {
-    console.log(this.state);
+    console.log('Filter with:', this.state);
   }
 
 }
