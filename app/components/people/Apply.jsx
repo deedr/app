@@ -1,10 +1,7 @@
 import React from 'react';
 import {RaisedButton, Styles} from 'material-ui';
-import Router from 'react-router';
+import {Link} from 'react-router';
 import {SkillsOptions, CausesOptions} from '../../constants/FilterContants.js';
-
-let Link = Router.Link;
-
 import MultiSelectField from './../widgets/MultiSelectField.jsx';
 let { Spacing, Colors } = Styles;
 

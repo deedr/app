@@ -10,8 +10,8 @@ let { Spacing, Colors} = Styles;
 
 class App extends React.Component {
 
-  constructor() {
-    super();
+  constructor(props, context) {
+    super(props, context);
     ThemeManager.setPalette({
       accent1Color: Colors.deepOrange500
     });
