@@ -1,6 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
-import Link from 'react-router';
+
 import {
   Card,
   CardMedia,
@@ -9,7 +9,7 @@ import {
 } from 'material-ui';
 import AttributeSetter from '../../utils/AttributeSetter.js';
 import CampaignsStore from '../../stores/CampaignsStore.js';
-import CampaignListItem from './CampaignListitem.jsx'
+import CampaignListItem from './CampaignListItem.jsx'
 
 class CampaignsList extends React.Component {
 
@@ -50,9 +50,6 @@ class CampaignsList extends React.Component {
     this.setLayout();
   }
 
-  onClickedCard(){
-
-  }
 
   //TODO:We shouldn't really render here; refactor
   render() {

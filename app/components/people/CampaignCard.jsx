@@ -17,7 +17,8 @@ import CampaignsStore from '../../stores/CampaignsStore.js';
 
 let {Spacing} = Styles;
 
-@reactMixin.decorate(State) class CampaignCard extends React.Component {
+@reactMixin.decorate(State)
+class CampaignCard extends React.Component {
 
   constructor(props, context) {
     super(props, context);
@@ -29,25 +30,25 @@ let {Spacing} = Styles;
   render() {
     let styles = {
       root: {
-        maxMargin: '900px',
+        maxWidth: '900px',
         marginLeft: 'auto',
+        marginTop: '8px',
         marginRight: 'auto'
       }
     };
     let campaign = this.state.campaign;
     return (
-      <div>
+      <div style={styles.root}>
         <Card>
           <CardMedia overlay={<CardTitle title={campaign.title} subtitle={campaign.subtitle}/>}>
             <img src={campaign.cover}/>
           </CardMedia>
-          <CardActions>
-            <FlatButton label="Action1"/>
-            <FlatButton label="Action2"/>
-          </CardActions>
           <CardText>
             {campaign.description}
           </CardText>
+          <CardActions>
+            <FlatButton label="Apply"/>
+          </CardActions>
         </Card>
       </div>
     );

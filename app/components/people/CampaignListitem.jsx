@@ -1,4 +1,6 @@
 import React from 'react';
+import reactMixin from 'react-mixin';
+import {Navigation} from 'react-router';
 import {
   Avatar,
   Card,
@@ -11,7 +13,8 @@ import {
 
 let {Transitions } = Styles;
 
-class CampaignListitem extends React.Component {
+@reactMixin.decorate(Navigation)
+class CampaignListItem extends React.Component {
 
   constructor(props, context) {
     super(props, context);
@@ -22,13 +25,14 @@ class CampaignListitem extends React.Component {
 
   render() {
     let style = {
+      cursor: 'pointer',
       transition: Transitions.easeOut()
     };
     let campaign = this.props.campaign;
     return (
       <Paper zDepth={this.state.zDepth} style={style}
-             onMouseEnter={this.onMouseEnter}
-             onMouseLeave={this.onMouseLeave}>
+             onClick={() => this.transitionTo('campaign', {id: campaign.id})}
+             onMouseEnter={this.onMouseEnter} onMouseLeave={this.onMouseLeave}>
         <CardMedia overlay={<CardTitle title={campaign.title} subtitle={campaign.subtitle}/>}>
           <img src={campaign.cover}/>
         </CardMedia>
@@ -51,7 +55,7 @@ class CampaignListitem extends React.Component {
     });
   }
 }
-CampaignListitem.propTypes = {
+CampaignListItem.propTypes = {
   campaign: React.PropTypes.object.isRequired
 };
-export default CampaignListitem;
+export default CampaignListItem;

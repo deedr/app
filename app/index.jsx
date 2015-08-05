@@ -1,6 +1,6 @@
 import React from 'react';
 import Router from 'react-router';
-import AppRoutes from './components/AppRoutes.jsx';
+import AppRoutes from './AppRoutes.jsx';
 import injectTapEventPlugin from'react-tap-event-plugin';
 
 //Needed for React Developer Tools
