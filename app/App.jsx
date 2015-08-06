@@ -1,7 +1,7 @@
 import React from 'react';
 import { AppBar, AppCanvas, Styles } from 'material-ui';
 import Router from 'react-router';
-
+import GoogleAnalytics from 'react-g-analytics';
 
 let RouteHandler = Router.RouteHandler;
 let ThemeManager = new Styles.ThemeManager();
@@ -33,6 +33,7 @@ class App extends React.Component {
         <AppBar title="Deedr" showMenuIconButton={false}/>
 
         <div style={root}>
+          <GoogleAnalytics id="UA-64331021-2" pageview={true} displayfeatures={true}/>
           <RouteHandler />
         </div>
       </AppCanvas>

@@ -13,5 +13,5 @@ window.React = React;
 injectTapEventPlugin();
 
 Router.run(AppRoutes, Router.HashLocation, (Root) => {
-  React.render(<Root/>, document.body);
+  React.render(<Root/>, document.getElementById('app'));
 });
