@@ -1,12 +1,12 @@
 let SkillsOptions = [
   { label: 'SEO', value: 'seo' },
   { label: 'Construction', value: 'construction' },
-  { label: 'Computer Programming', value: 'coputer' }
+  { label: 'Computer Programming', value: 'computer' }
 ];
 let CausesOptions = [
-  { label: 'Cute Animalas', value: 'cute' },
-  { label: 'Ugly animals', value: 'ugle' },
-  { label: 'super ugly animals', value: 'strawberry' }
+  { label: 'SOS villages', value: 'sos' },
+  { label: 'Food Bank', value: 'food' },
+  { label: 'Children\'s Museum', value: 'children_museum' }
 ];
 
 export default {
